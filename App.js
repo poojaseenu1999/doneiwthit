@@ -2,29 +2,25 @@ import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
   Text,
-  TouchableOpacity,
-  Image,
   SafeAreaView,
 } from "react-native";
-import { Button } from "react-native-web";
+import SignInScreen from "./assets/src/screens/SignInScreen";
+import Navigation from "./assets/src/navigation";
+
+
+
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text>hello world </Text>
-      <TouchableOpacity onPress={() => console.log("image pressed")}>
-        <Image source={{width: 200,height: 300,uri: "https://picsum.photos/200/300"}}/>
-        <Button color='orange' title='click me' onPress={() => alert('button clicked')}></Button>
-      </TouchableOpacity>
+    <SafeAreaView style={styles.root}>
+      <Navigation />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: 'none',
   },
 });
